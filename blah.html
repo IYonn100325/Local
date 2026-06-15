@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chat Messages</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f0f2f5;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        /* Chat Container */
+        .chat-container {
+            width: 100%;
+            max-width: 400px;
+            height: 500px;
+            background-color: #ffffff;
+            border-radius: 12px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+            display: flex;
+            flex-direction: column;
+            overflow: hidden;
+        }
+
+        /* Chat Header */
+        .chat-header {
+            background-color: #075e54;
+            color: white;
+            padding: 15px;
+            font-size: 1.1rem;
+            font-weight: bold;
+        }
+
+        /* Message Thread Area */
+        .message-thread {
+            flex: 1;
+            padding: 15px;
+            overflow-y: auto;
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+        }
+
+        /* Base Message Bubble */
+        .message {
+            max-width: 75%;
+            padding: 10px 14px;
+            border-radius: 18px;
+            font-size: 0.95rem;
+            line-height: 1.4;
+            position: relative;
+            word-wrap: break-word;
+        }
+
+        /* Received Message Styles (Left) */
+        .message.received {
+            background-color: #e9ecef;
+            color: #333333;
+            align-self: flex-start;
+            border-bottom-left-radius: 4px;
+        }
+
+        /* Sent Message Styles (Right) */
+        .message.sent {
+            background-color: #d9fdd3;
+            color: #111111;
+            align-self: flex-end;
+            border-bottom-right-radius: 4px;
+        }
+
+        /* Timestamp Style */
+        .timestamp {
+            display: block;
+            font-size: 0.75rem;
+            color: #777777;
+            text-align: right;
+            margin-top: 4px;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="chat-container">
+        <div class="chat-header">
+            Alex
+        </div>
+        
+        <div class="message-thread">
+            <div class="message received">
+                Do Your Commitment Ivan
+                <span class="timestamp">10:14 AM</span>
+            </div>
+
+            <div class="message sent">
+                Ok 
+                <span class="timestamp">10:15 AM</span>
+            </div>
+
+            <div class="message received">
+                change when commitment is done
+                <span class="timestamp">10:16 AM</span>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>
